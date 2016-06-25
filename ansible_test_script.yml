@@ -1,0 +1,8 @@
+ - name: Deploying packages 
+   hosts: production
+   remote_user: ubuntu
+   sudo: yes
+
+   tasks:
+    - name: Ensure Mysql is up and running
+      apt: name=mysql-server state=latest
