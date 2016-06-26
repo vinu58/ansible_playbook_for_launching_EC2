@@ -5,14 +5,9 @@ as we need to keep two environment (production and staging) using same playbook.
 
 The image:    This need to be changed to custom image id as we are using t2.micro instance the image should be supporting HVM 
 
-
-
 The region:   This need to be customized according to the region which is used.
 
-
-
 The tag name: This is where env is specified if we are launching instance in production env , then the tag name should be name_tag: "production" else if we are launching instance in staging env then the tag name should be name_tag: "staging"
-
 
               
 dest:         This is where custom hosts details has been maintained. I am keeping two separate hosts file for production and staging env
