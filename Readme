@@ -9,12 +9,11 @@ The region:   This need to be customized according to the region which is used.
 
 The tag name: This is where env is specified if we are launching instance in production env , then the tag name should be name_tag: "production" else if we are launching instance in staging env then the tag name should be name_tag: "staging"
 
-              
+             
 dest:         This is where custom hosts details has been maintained. I am keeping two separate hosts file for production and staging env
               I have created a folder named inventory,  created two folders named production and staging, inside where i am keeping the respective hosts files. 
               The entries all are automated just need to rename hosts-production and hosts-staging to hosts and place the files in respective enviroment folders.
               NOTE: need to specify the exact path where the files has been placed inside the playbook
-              
               
               
 hosts:        There we need to place the value same as that of tag name, based on that ec2 has been configured. 
@@ -23,14 +22,11 @@ hosts:        There we need to place the value same as that of tag name, based o
                        if its staging hosts: staging 
                        
                        
-                       
 src=          The flask app has been saved in a file and need to provide exact path where the file need to be copied should be specified
               NOTE: i have used flask default port 5000 if this required to be customised please remember to change the port specified to be opened, to be customised.
               
               
-              
 The parameters like image , region , dest , src are need to be set one time, The tagname and hosts need to be altered according to the requirement
-
 
 ansible.cfg :             This file contains the details all the ansible configuration
 ansible_test_script.yml:  This is a sample ansible playbook to check whether the newly configured playbook can be re-configured once it launched using respective tag name
