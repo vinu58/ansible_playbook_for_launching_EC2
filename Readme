@@ -24,3 +24,11 @@ src=          The flask app has been saved in a file and need to provide exact p
               NOTE: i have used flask default port 5000 if this required to be customised please remember to change the port specified to be opened, to be customised.
               
 The parameters like image , region , dest , src are need to be set one time, The tagname and hosts need to be altered according to the requirement
+
+
+ansible.cfg :             This file contains the details all the ansible configuration
+ansible_test_script.yml:  This is a sample ansible playbook to check whether the newly configured playbook can be re-configured once it launched using respective tag name
+hello.py:                 This file contains the code of sample flask app 
+hosts-production:         This is the hosts file for production and it need to renamed to hosts and place this file in {custom_path}/inventory/production/
+hosts-staging:            This is the hosts file for staging and it need to renamed to hosts and place this file in {custom_path}/inventory/staging/
+playbook.yml:             This is the actual ansible playbook to launch the instance 
